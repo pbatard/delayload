@@ -28,7 +28,9 @@ Two "workarounds" have been found to alleviate the issue:
    discarded. Likewise, this workaround is problematic, as, even outside
    of having to identify all the problematic function calls, one must make
    sure these additional intrinsic function calls are referenced by the
-   application.
+   application or added as `-u` parameters when invoking `ld`, and since the
+   decorations are not the same for 32 and 64 bit, one cannot just use a
+   single common 32 + 64 bit implementation...
 
 ## Testing
 

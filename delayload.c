@@ -4,11 +4,7 @@
 // Use -DWORKAROUND1 or -DWORKAROUND2 to test the workarounds
 #ifdef WORKAROUND1
 #undef DECLSPEC_IMPORT
-#ifdef __GNUC__
 #define DECLSPEC_IMPORT __attribute__((visibility("hidden")))
-#else
-#define DECLSPEC_IMPORT __declspec(dllimport)
-#endif
 #endif	// WORKAROUND1
 
 #include <wininet.h>
